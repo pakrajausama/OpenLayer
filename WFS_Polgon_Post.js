@@ -12,8 +12,8 @@ function fetchWFSGeoJSON(wfsUrl, params, onSuccess, onError) {
               console.error('Error fetching WFS data:', data.error);
               if (onError) onError(data.error);
           } else {
-            // console.log('Fetched WFS GeoJSON Data:', data);
-              if (onSuccess) onSuccess(data);
+            // // console.log('Fetched WFS GeoJSON Data:', data);
+            //   if (onSuccess) onSuccess(data);
           }
       })
       .catch((error) => {
