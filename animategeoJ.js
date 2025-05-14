@@ -41,19 +41,17 @@
       
       };
 
-      const animation = animations[animationType];
-      if (!animation) return;
+ const keyframes = animations[animationType];
+   if (!keyframes) return;
 
-      boundary.eachLayer(l => {
-        const path = l._path;
-        if (!path) return;
-
-        path.getAnimations().forEach(a => a.cancel());
-
-        path.animate(animation, {
-          duration: 1500,
-          fill: 'forwards',
-          composite: 'accumulate'
-        });
-      });
-    }
+  boundary.eachLayer(layer => {
+    const path = layer._path;
+    if (!path) return;
+    path.getAnimations().forEach(a => a.cancel());
+    path.animate(keyframes, {
+      duration: 1500,
+      fill: 'forwards',
+      composite: 'accumulate'
+    });
+  });
+}
