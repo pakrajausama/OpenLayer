@@ -1,4 +1,4 @@
- function animateBoundary(animationType) {
+window.animateBoundary = function(boundary, animationType) {
       const animations = {
         bounce: [
           { opacity: 0, transform: 'translateY(-100%) scale(0.2) rotateZ(-5deg)', offset: 0 },
